@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://wizqd.com/sitemap.xml

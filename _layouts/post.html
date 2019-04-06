@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div>
+  <h1>{{ page.title }}</h1>
+  <p class="date">{{ page.date | date_to_string }}</p>
+
+  <div class="post">
+    {{ content }}
+  </div>
+  <div>
+    {% include post-copyright.html %}
+  </div>
+  <div>
+    {% include post-navigation.html %}
+  </div>
+  <div>
+    {% include return-to-top.html %}
+  </div>
+</div>

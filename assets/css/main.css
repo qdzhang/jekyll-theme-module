@@ -1,0 +1,331 @@
+/*------basic-style-----*/
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    color:#333;
+    background:#fff;
+    -ms-text-size-adjust:100%;
+    text-rendering:optimizelegibility
+}
+
+html, body { 
+    scroll-behavior:smooth;
+}
+
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+
+.tag ul {
+    list-style: none;
+}
+
+nav ul li, footer ul li, .tag ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight: 100;
+}
+p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 1.2em;
+    color: #333;
+}
+
+blockquote {
+    margin: 40px auto;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 4px solid #2EA9DF;/*---pre color #33A6B8---*/
+    line-height: 1.6;
+    position: relative;
+    background: #ededed;
+}
+
+blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #2EA9DF;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+  
+blockquote::after {
+    content: "";
+}
+
+.footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    line-height: 2;
+    text-align: left;
+    font-size: 16px;
+    padding-top: 50px
+}
+
+@media only screen and (max-width:640px) {
+    .container {
+        width: 80%;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+.tag {
+    display: block;
+    font-size: 16px;
+}
+
+.container .main-nav-link, 
+.container .footer .footer-link, 
+.container .post-navigation .post-nav-link,
+.container .back-to-top a,
+.container .tag .tag-link {
+    text-decoration: none;
+    color: #999;
+}
+
+.container a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+}
+
+.container a:hover,
+.container .main-nav-link:hover, 
+.container .footer .footer-link:hover, 
+.container .post-navigation .post-nav-link:hover,
+.container .tag .tag-link:hover {
+    color: #2EA9DF;/*----pre color #22c5e5----*/
+    transition:color .1s linear
+}
+
+.container .footer .footer-link:hover {
+    text-decoration: underline;
+}
+
+.container .post a {
+    border-bottom:1px solid #1abc9c;
+}
+
+.container .post a:hover {
+    border-bottom-color:#999;
+    color:#999;
+}
+
+.container .article-title-date {
+    display: inline-block;
+    font-size: 80%;
+}
+
+.date, .container .article-title-date {
+    color: #888;
+}
+
+/*------post_copyright-----*/
+.post_copyright {
+    margin: 20px auto;
+    color: #555;
+    padding: 1.2em 30px 1.2em 30px;
+    line-height: 1.6;
+    position: relative;
+    text-align: left;
+    background: #ededed;
+}
+
+/*------MathJax-style-----*/
+.MathJax_Display {
+    font-size: 20px;
+    line-height: 1.4em;
+}
+
+/*------post-navigation-style-----*/
+.post-navigation{
+    display: table;
+    width: 100%;
+}
+
+.nav-previous, .nav-next {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+}
+
+.nav-previous{
+    text-align:right;
+}
+.nav-next{
+    text-align:left;
+}
+
+/*--------return-to-top-----------*/
+#return-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(128,128,128,0.5);
+    width: 40px;
+    height: 40px;
+    
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 19px;
+}
+
+#return-to-top:hover {
+    background: rgba(46, 169, 223, 0.5);
+}
+
+/*----------index-pagination-----------*/
+ .pagination {
+    border-top: none;
+    margin: 10px 0 0px;
+}
+
+.container .pagination .next, 
+.container .pagination .page-number, 
+.container .pagination .prev {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-bottom: 0;
+    transition-property: border-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.container .pagination .page-number.current {
+    color: #fff;
+    background: #2EA9DF;
+}
+
+/* .container .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd; 
+}
+
+.container .pagination a.active {
+    background-color: #00aaff;
+    color: white;
+  }
+  
+.container .pagination a:hover:not(.active) {
+    background-color: #ddd;
+} */
+
+
+/* The work below, CSSBox, is released under the Creative Commons
+   Attribution-ShareAlike 4.0 license and is available on
+   https://github.com/TheLastProject/CSSBox. You are not required to add
+   additional credit to your website, just leave the above text in this file */
+   div.cssbox {
+    display: inline-block;
+  }
+  
+  span.cssbox_full {
+    z-index: 999;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s linear;
+  }
+  
+  span.cssbox_full img {
+    position: fixed;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    max-height: 90%;
+    max-width: 90%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px black;
+  }
+  
+  a.cssbox_close,
+  a.cssbox_prev,
+  a.cssbox_next {
+    z-index: 999;
+    position: fixed;
+    text-decoration: none;
+    visibility: hidden;
+    color: white;
+    font-size: 36px;
+  }
+  
+  a.cssbox_close {
+    top: 1%;
+    right: 1%
+  }
+  
+  a.cssbox_close::after {
+    content: '\00d7';
+  }
+  
+  a.cssbox_prev,
+  a.cssbox_next {
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  
+  a.cssbox_prev {
+    left: 5%;
+  }
+  
+  a.cssbox_next {
+    right: 5%;
+  }
+  
+  a:target ~ a.cssbox_close,
+  a:target ~ a.cssbox_prev,
+  a:target ~ a.cssbox_next {
+    visibility: visible;
+  }
+  
+  a:target > img.cssbox_thumb + span.cssbox_full {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+  }
+  
+  span.cssbox_full {
+    cursor: initial;
+  }
+  /* This is the end of CSSBox */

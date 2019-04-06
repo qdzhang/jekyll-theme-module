@@ -1,0 +1,35 @@
+title: 大象小象
+name: 大象小象
+description: "读书，写作，思考"
+author: wizqd
+keyword: "wizqd, wizard, blog, 博客, jekyll, GitHub, 文字"
+
+permalink: /blog/:year/:month/:day/:title
+
+# Pagination
+paginate: 11
+paginate_path: "page:num"
+
+# Markdown Processors
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Code Highlighter
+highlighter: rouge
+highlight:
+line_number: true
+
+# Website favicon
+favicon: /assets/images/favicon.ico
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-feed
+  - jekyll-paginate
+
+# Atom feed
+feed:
+  path: atom.xml

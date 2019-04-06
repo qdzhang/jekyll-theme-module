@@ -1,0 +1,35 @@
+<div class="pagination">
+	{% if paginator.total_pages > 1 %}
+	<!-- 分页代码 -->
+		{% if paginator.previous_page %}
+			{% if paginator.previous_page == 1 %}
+				<a class="prev" href="/">上一页</a>
+			{% else %}
+				<a class="prev" href="/page{{ paginator.previous_page }}">上一页</a>
+			{% endif %}
+
+		{% else %}
+			<span class="prev">上一页</span> <!--disabled-->
+		{% endif %}
+
+		{% if paginator.page == 1 %}
+			<span class="page-number current">1</span> <!--active-->
+		{% else %}
+			<a class="page-number" href="/">1</a>
+		{% endif %}
+
+		{% for page in (2..paginator.total_pages) %}
+			{% if page == paginator.page %}
+				<span class="page-number current">{{ page }}</span> <!--active-->
+			{% else %}
+				<a class="page-number" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+			{% endif %}
+		{% endfor %}
+
+		{% if paginator.next_page %}
+			<a class="next" href="/page{{ paginator.next_page }}">下一页</a>
+		{% else %}
+			<span class="next">下一页</span> <!--disabled-->
+		{% endif %}
+	{% endif %}
+</div>

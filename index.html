@@ -1,0 +1,19 @@
+---
+layout: default
+title: 大象小象
+---
+
+<h1>{{ page.title }}</h1>
+
+<div>
+    {% for post in paginator.posts %}
+    <div>
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}" class="article-title-date">{{ post.date | date:"%Y-%m-%d" }}</time>
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% include pagination.html %}
